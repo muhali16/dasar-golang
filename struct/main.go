@@ -107,4 +107,50 @@ func main() {
 		fmt.Println("\tMath:", grade.mathematic)
 		fmt.Println("\tScience:", grade.science)
 	}
+	fmt.Println("---------------------------------------------------------")
+	{
+		/*
+			Slice and struct
+		*/
+		var data = []mhs{
+			{"Muhammad Ali Mustaqim", 2004},
+			{"Laurence NS", 2006},
+			{"Raditya Dika", 2008},
+		}
+
+		for key, dt := range data {
+			fmt.Println(key+1, "\tNama:", dt.nama)
+			fmt.Println("\tNIM:", dt.nim)
+		}
+	}
+	fmt.Println("---------------------------------------------------------")
+	{
+		/*
+			Anonymous slice and struct
+		*/
+
+		var grade = []struct {
+			mhs
+			mathematic int
+		}{
+			{
+				mhs:        mhs{"Muhammad Ali Mustaqim", 2004},
+				mathematic: 90,
+			},
+			{
+				mhs:        mhs{"Laurence NS", 2006},
+				mathematic: 90,
+			},
+			{
+				mhs:        mhs{"Raditya Dika", 2008},
+				mathematic: 80,
+			},
+		}
+
+		for key, dt := range grade {
+			fmt.Println(key+1, "\tNama:", dt.nama)
+			fmt.Println("\tNIM:", dt.nim)
+			fmt.Println("\tMath:", dt.mathematic)
+		}
+	}
 }
