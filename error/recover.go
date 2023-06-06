@@ -3,7 +3,7 @@ package main
 import . "fmt"
 
 func main() {
-	var peoples = []string{"loren", "budhi", "ali", "adhit", "priji"}
+	var peoples = []string{"loren", "budhi", "ali", "adhit", "pariji"}
 
 	for _, people := range peoples {
 
